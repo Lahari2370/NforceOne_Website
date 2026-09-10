@@ -1551,3 +1551,32 @@ body.home .section-heading p{color:var(--muted);font-size:14px;line-height:1.65;
 body.home .content-card h3{font-size:15px!important;line-height:1.3!important;letter-spacing:-.01em!important;font-weight:800;margin:0 0 8px}
 body.home .card-title-row h3{margin:0}
 body.home .content-card p{font-size:12px;line-height:1.65}
+/* HOMEPAGE SECTION WIDTH FIX */
+
+body.home .section-heading {
+    width: min(1500px, calc(100% - 80px));
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.home .content-split {
+    width: min(1500px, calc(100% - 80px));
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 900px) {
+    body.home .section-heading,
+    body.home .content-split {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    body.home .section-heading,
+    body.home .content-split {
+        width: calc(100% - 24px);
+    }
+}
