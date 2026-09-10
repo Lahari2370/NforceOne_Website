@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /pages/login.html
+Disallow: /pages/signup.html
+Disallow: /pages/dashboard.html
+
+Sitemap: https://www.nforceone.com/sitemap.xml
