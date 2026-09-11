@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded',()=>{
    if(target)target.classList.add('active');
  };
  const path=location.pathname.toLowerCase();
- if(path.endsWith('/index.html')||path.endsWith('/NforceOne_Website/')||path.endsWith('/site')){
+ if(path.endsWith('/index.html')||path.endsWith('/site/')||path.endsWith('/site')){
    setActive({href:'index.html'});
    const sections=[['services','services'],['top','home']];
    if('IntersectionObserver'in window){

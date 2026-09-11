@@ -7,15 +7,15 @@ if(window.__nf1AssistantBooted) return;
 window.__nf1AssistantBooted = true;
 
 var path = location.pathname.toLowerCase();
-var inPages = path.indexOf('/pages/') !== -1;
+var inPages = path.indexOf('/pages/') !== -1 && path.indexOf('/site/') === -1;
 
 function pageUrl(name){
   if(name === 'index.html' || name.indexOf('index.html#') === 0){
-    return inPages ? '../' + name : name;
+    return inPages ? '../site/' + name : name;
   }
   return inPages ? name : '../pages/' + name;
 }
-function siteAsset(name){ return inPages ? '../' + name : name; }
+function siteAsset(name){ return inPages ? '../site/' + name : name; }
 
 function esc(s){
   return String(s).replace(/[&<>"']/g, function(c){
